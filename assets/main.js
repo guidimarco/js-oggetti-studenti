@@ -32,22 +32,7 @@ $("document").ready(function() {
 
     console.log("*** PARTE 2 ***");
 
-    // ALGORITHM cycle each student and stamp name + surname
-    for (var i = 0; i < students.length; i++) {
-        var currentStudent = students[i];
-        // currentStudent: name + surname
-        var studentName = "";
-
-        // cycle every student (obj) in search of name + surname
-        for (var key in currentStudent) {
-            if (key == "name") {
-                studentName += currentStudent[key] + " ";
-            } else if (key == "surname") {
-                studentName += currentStudent[key];
-            }
-        }
-        console.log(studentName);
-    }
+    stampNameSurname(students);
 
     // PART 3
     // empty var for user student
@@ -83,8 +68,29 @@ $("document").ready(function() {
 
 // <1-fold SSSSS ALL FUNCTION SSSSS
 
-// #2-fold SSSSS function SSSSS
+// #2-fold SSSSS stamp name and surname SSSSS
+// ALGORITHM cycle each student and stamp name + surname
+function stampNameSurname(array) {
+    // LOCAL VAR
+    var currentStudent;
+    var studentName = ""; // string
 
-// #/2-fold EEEEE function EEEEE
+    for (var i = 0; i < array.length; i++) {
+        currentStudent = array[i];
+        studentName = "";
+
+        // cycle every student (obj) in search of name + surname
+        for (var key in currentStudent) {
+            if (key == "name") {
+                studentName += currentStudent[key] + " ";
+            } else if (key == "surname") {
+                studentName += currentStudent[key];
+            }
+        }
+        console.log(studentName);
+    }
+};
+
+// #/2-fold EEEEE stamp name and surname EEEEE
 
 // </1-fold> EEEEE ALL FUNCTION EEEEE
