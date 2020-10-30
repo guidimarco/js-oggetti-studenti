@@ -32,7 +32,14 @@ $("document").ready(function() {
 
     console.log("*** PARTE 2 ***");
 
+    console.log("Vers 1.0");
     stampNameSurname(students);
+
+    // console.log("Vers 2.0");
+    // stampNameSurnameTwo(students);
+
+    // console.log("Vers 3.0");
+    // stampNameSurnameTwo(students);
 
     // PART 3
     // empty var for user student
@@ -88,6 +95,61 @@ function stampNameSurname(array) {
             }
         }
         console.log(studentName);
+    }
+};
+
+// #/2-fold EEEEE stamp name and surname EEEEE
+
+// #2-fold SSSSS stamp name and surname SSSSS
+// ALGORITHM cycle each student and stamp name + surname
+function stampNameSurnameTwo(array) {
+    // LOCAL VAR
+    var currentStudent;
+    var studentName = []; // array
+
+    for (var i = 0; i < array.length; i++) {
+        currentStudent = array[i];
+        studentName = [];
+
+        // cycle every student (obj) in search of name + surname
+        for (var key in currentStudent) {
+            if (key == "name") {
+                studentName.push(currentStudent[key]);
+            } else if (key == "surname") {
+                studentName.push(currentStudent[key]);
+            }
+        }
+
+        console.log(studentName.join(" "));
+    }
+};
+
+// #/2-fold EEEEE stamp name and surname EEEEE
+
+// #2-fold SSSSS stamp name and surname SSSSS
+// ALGORITHM cycle each student and stamp name + surname
+function stampNameSurnameThree(array) {
+    // LOCAL VAR
+    var currentStudent;
+    var studentName = []; // array
+
+    for (var i = 0; i < array.length; i++) {
+        currentStudent = array[i];
+        studentName = [];
+
+        // cycle every student (obj) in search of name + surname
+        for (var key in currentStudent) {
+            switch (key) {
+                case key: name
+                    studentName.push(currentStudent[key]);
+                    break;
+                case key: surname
+                    studentName.push(currentStudent[key]);
+                    break;
+            }
+        }
+
+        console.log(studentName.join(" "));
     }
 };
 
