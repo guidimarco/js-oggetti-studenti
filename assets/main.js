@@ -45,33 +45,59 @@ $("document").ready(function() {
     console.log("Vers 4.0");
     stampNameSurnameFour(students);
 
-    // PART 3
-    // empty var for user student
-    var userStudent = {};
+    // // PART 3 - VERSION 1
+    // // empty var for user student
+    // var userStudent = {};
+    //
+    // console.log("*** PARTE 3 ***");
+    //
+    // // ASK NAME AND PUSH IN THE OBJ
+    // // ask and add
+    // var nome = prompt("Inserisci il nome:");
+    // userStudent["name"] = nome;
+    //
+    // // ASK NAME AND PUSH IN THE OBJ
+    // var cognome = prompt("Inserisci il cognome:");
+    // userStudent["surname"] = cognome;
+    //
+    // // ASK NAME AND PUSH IN THE OBJ
+    // var age = parseInt(prompt("Inserisci la tua età:"));
+    // userStudent["age"] = age;
+    //
+    // console.log("Nuovo studente:");
+    // console.log(userStudent);
+    //
+    // // ADD NEW STUDENT INTO THE STUDENTS ARRAY
+    // students.push(userStudent);
+    //
+    // console.log("Classe aggiornata:");
+    // console.log(students);
 
-    console.log("*** PARTE 3 ***");
-
-    // ASK NAME AND PUSH IN THE OBJ
-    // ask and add
+    // PART 3 - VERSION 2: add info after
+    // ask name + surname + age
     var nome = prompt("Inserisci il nome:");
-    userStudent["name"] = nome;
-
-    // ASK NAME AND PUSH IN THE OBJ
     var cognome = prompt("Inserisci il cognome:");
-    userStudent["surname"] = cognome;
-
-    // ASK NAME AND PUSH IN THE OBJ
     var age = parseInt(prompt("Inserisci la tua età:"));
-    userStudent["age"] = age;
 
+    var userStudent = {
+        "name" : nome,
+        "surname" : cognome,
+        "age" : age
+    }
+
+    // console-print
+    console.log("*** PARTE 3 ***");
     console.log("Nuovo studente:");
     console.log(userStudent);
 
     // ADD NEW STUDENT INTO THE STUDENTS ARRAY
     students.push(userStudent);
 
+    // console-print
     console.log("Classe aggiornata:");
     console.log(students);
+
+
 
 
 }); // END document code
