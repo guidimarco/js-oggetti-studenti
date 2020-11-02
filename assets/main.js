@@ -32,14 +32,18 @@ $("document").ready(function() {
 
     console.log("*** PARTE 2 ***");
 
-    console.log("Vers 1.0");
-    stampNameSurname(students);
+    // console.log("Vers 1.0");
+    // stampNameSurname(students);
 
     // console.log("Vers 2.0");
     // stampNameSurnameTwo(students);
 
     // console.log("Vers 3.0");
-    // stampNameSurnameTwo(students);
+    // rivedere perche stampa l'eta
+    // stampNameSurnameThree(students);
+
+    console.log("Vers 4.0");
+    stampNameSurnameFour(students);
 
     // PART 3
     // empty var for user student
@@ -150,6 +154,20 @@ function stampNameSurnameThree(array) {
         }
 
         console.log(studentName.join(" "));
+    }
+};
+
+// #/2-fold EEEEE stamp name and surname EEEEE
+
+// #2-fold SSSSS stamp name and surname SSSSS
+// ALGORITHM cycle each student and stamp name + surname
+function stampNameSurnameFour(array) {
+    // LOCAL VAR
+    var currentStudent;
+
+    for (var i = 0; i < array.length; i++) {
+        currentStudent = array[i];
+        console.log(currentStudent.name + " " + currentStudent.surname);
     }
 };
 
